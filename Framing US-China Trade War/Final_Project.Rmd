@@ -1,0 +1,280 @@
+---
+title: 'Framing 2018 U.S.-China Trade War During Trump Era'
+author: "Min Shi"
+date: "December 10 2021"
+output: 
+  html_document: 
+    toc: yes
+    toc_float: yes
+    highlight: default
+    theme: cosmo
+    number_sections: yes
+---
+
+[Personal GitHub](https://github.com/MinShiMia/Content-Analysis-Using-Machine-Learning.git)
+
+# Abstract
+The 2018 U.S.-China trade war is a long-lasting and influential global event. Its effects are not only shown on the trade and economic aspect of the two sides but also spill into the U.S.-China relations. This research project investigates how newspapers in China and the U.S. frame the trade war and the tones of different news coverage. This research conducts a quantitative content analysis based on a collection of 529 sampled articles published between January 2018 and January 2021 by four news organizations. Two of them are from the U.S., including the New York Times and the Wall Street Journal. And the other two are from China, including the People's Daily and China Economic Times. The results of keywords count, topic modeling, sentiment analysis, combined with Chi-square tests, suggest that politically oriented newspapers (i.e., People's Daily, the NYT) are more likely to use aggressive words, such as "trade war" to describe U.S.-China relations than bushiness-focused newspaper (i.e., China Economic Times, the WSJ), which prefer to use trade conflict/ friction/ dispute. Besides, the Chinese newspapers are more likely to function as a vehicle of the Chinese government to propagandize its thoughts and criticize the U.S.'s actions during the Trade War. Moreover, the news coverage of People's Daily, NYT, and WSJ about the U.S.-China trade war is more negative than CET. Finally, political-oriented newspapers use more negative words to describe the U.S.-China trade war than business-focused newspapers. Overall, the findings suggest that media both reflects and informs public opinion. Thus, analyzing news coverage could discover the government's attitudes and reveal the future of U.S.-China relations during the post-pandemic era.
+
+
+# Introduction 
+Since the U.S. launched the Trade War in 2018, the subsequent tit-for-tat exchange of sanctions between the U.S. and China towards each other never ended till January 15, 2020, when the two sides signed the Phase One Deal. There are mainly four phases of the U.S.-China trade war. In the first phase, the U.S. announced a preliminary tariff list for the imports from China on April 3, 2018, which was worth U.S. \$50 billion; China also announced a list of the same amount on the second day. The final lists were decided in June and implemented in July 2018 (Wong & Koty, 2020). In the second phase, the U.S. side announced the tariff plan on another list of Chinese goods worth US\$200 billion; China announced the tariff on US\$60 billion worth of U.S. goods on the next day. The tariffs on both sides came into effect on September 24, 2018 (Mullen, 2021). In the third phase of the trade war, the U.S. has announced tariffs on additional US\$300 billion Chinese exports to the U.S., and China used retaliatory measure-announcing tariffs on US\$75 billion worth of American goods (Liang & Ding 2020: 41-44). The signature of Phase One Deal marked the U.S.-China trade war marched into the next phase. In line with the phase one deal, China gradually grants tariff exemptions on U.S. goods in the fourth phase. Due to the pandemic, the two sides postponed the trade deal review scheduled for August 15, 2020 (Wong & Koty, 2020). But the U.S.-China relation does not go smoothly. On December 2, 2020, the U.S. government said it would block importing all cotton products made by the Xinjiang Production and Construction Corps (XPCC). Till the end of the Trump administration, there was no bright signal of the end of the U.S.-China trade war, and the trade talks and negotiations are still going on. 
+
+Many people depend on mass media for much of the information we require to learn about society and the world. Media both reflect and inform public opinion (Young & Soroka, 2012). During the Trade War, media plays an essential role in covering the news and conveying information. Thus, what aspects of content media focus on in their coverages about the Trade War and what kinds of tongue used in the coverage reflect where the government and the public pay attention to and the government's attitudes. The news coverage will further significantly influence how the public frames the U.S.-China trade war. Thus, this research will use frame theory to analyze how the media --four new organizations (two from China and two from the U.S.) frame the U.S.-China trade war and conduct sentiment analysis to detect the different news organizations' tones.
+
+
+# Trade War and U.S.-China Relations
+## Trade War and Its Effect
+A trade war is an economic conflict between two or more nations resulting from extreme protectionism in which states raise import tariffs or place other restrictions on each other's imports (Chen, 2021; Wikipedia Foundation, 2021).
+
+As for the effect of trade wars on the country that launched it, the traditional free-trade theory maintains that free trade could benefit the country and the whole world best (Smith 1977); and regards tariffs and trade wars as zero-sum games will not benefit any country. Ricardo's doctrine of comparative costs attributed the cause and benefits of international trade to the difference in relative costs of producing the same commodities among countries (Wikipedia Foundation, 2021). If one country is more efficient in everything, it should pay for it to specialize in those products in which its comparative efficiency is most exceptional (Kaldor 1980, p. 85). Timothy Taylor (2012) asserted that tariff is a way of trade protectionism. Under political pressure, one nation always resorts to protectionism to protect domestic industries by limiting imports from other nations (p. 375). Although protectionism could help retain jobs within a specific industry, it could not increase the overall number of jobs in an economy (p. 377). Imposing tariffs to impede free trade is not suitable for one country's benefit maximization; it could even damage its benefit in the long term. As for one country, trade liberalization could maximize its welfare. Thus, no country could profit from the tariff war (Gros, 1987). 
+
+However, some scholars argue that tariffs could bring better welfare for citizens in one country under certain conditions. Gorman (1957) claims that if other country does not retaliate, welfare under tariffs is better for the nation's citizens than under free trade. Whalley (1985) argues that the tariff war between countries of different sizes would benefit the large but damage the small one, and it will damage both sides if it is between countries of the same size. Brander and Spencer (1985) propose a new concept – strategic trade policy in the same period. They argue that one government's trade protection measures could help protect domestic firms in global trades. They argue that under the unperfect market conditions if a country does not retaliate against a foreign country's export subsidy, it will hurt its economy and welfare. However, from the Prisoner's Dilemma, if the two countries both impose tariffs and other protection measures, the two countries would not produce the optimal outcome (The Investopedia Team, 2021).
+
+## U.S.-China Relations in Recent Decade
+With the rise and rejuvenation of China, its GDP surpassed Japan in 2010. Since then, China has become the second-largest economic power after the United States (Barboza, 2010; The World Bank, 2020). With the increasingly close economic exchanges between the U.S. and China, the frictions and conflicts between the two countries have gradually emerged. Since the Obama administration, the U.S. has begun to regard China as a strategic competitor and a significant threat to U.S. interests. After Donald Trump took office in 2017, the U.S. government focused on the trade unbalance between the U.S. and China. Since January 2018, U.S. President Donald Trump has begun imposing tariffs and other trade barriers on China to force it to change what the United States calls "unfair trade practices" and theft of intellectual property (Wikipedia Foundation, 2021). The relation between the two sides becomes more intense.
+
+Some scholars assert that the nexus between economic and security concerns are a crucial cause, and the Trump administration focuses more directly on the significance of recent Chinese technological innovations (Foot & King 2019: 40). We could also find strong evidence of the relation deterioration from the U.S. National Security Strategy (NSS) produced in December 2017 and the National Defense Strategy Summary 2018 (NDS). Besides, several politicians and policymakers in the Trump government, such as Vice President Mike Pence, Director of Trade and Manufacturing Policy Peter Navarro, Secretary of State Mike Pompeo, have shown a tough stance towards China, which motivates the U.S.-China trade conflicts.
+
+On the U.S.-China trade war, Steinbock (2018) claims that China's increasing power and influence have a negative effect on U.S. anxiety and the worsening U.S. perception of China. He also argues that the escalation from trade tensions to the trade war between the two sides is mainly driven by trade "hawks" in the Trump administration. Adekola (2019) attributes the U.S.-China trade war to the WTO's dispute settlement mechanism deficiencies. And he asserts that the U.S.-China trade war prompted the incorporation of a monetary remedy. Liang and Ding (2020) point out that the Phase One deal is a "ceasefire" agreement, and the upcoming Phase Two negotiations are essential for the future directions of the U.S.-China relationship (51).
+
+Overall, U.S.-China relations began to deteriorate during the recent decade, and the Trump administration has accelerated the deterioration by launching a trade war.
+
+# Framing Theory and News Coverages
+Framing theory is a classic theory in the field of media and communication. It specifically explains how the news media frame events or issues through disseminating their news coverage (Vreese, 2005). The media delivers the news to the audience to understand events. Also, it takes charge of expressing people's opinions and comments on events. Two countries might frame the same event from different angles. Gitlin (1980) claims that the frame is a "persistent patterns of cognition, interpretation, and presentation, of choice, emphasis, and omission" (p. 6). "Frame" represents the persistent cognitive framework, the process through which the people are influenced. On the other hand, "frame" shows where the public puts their attention since the news coverage reflects reality, following the public's attention. Framing theory has been widely applied in political communication research (Semetko et al. 2000, Guan 2018).
+
+Based on different arguments on the effects of the trade war, it is hard to tell whether it is beneficial or detrimental to the countries that launched it. Despite the Trump Administration held negative attitudes towards China's rising and the trade unbalance between the two countries and tend to benefit the U.S. through imposing tariffs on Chinese goods, the burden of the high tariff is borne by the importers, retailers, and U.S. consumers at last (Schoen, 2019). So, what are the general attitudes towards the trade war in the U.S.? Also, what are the general opinions towards the Trade War in China? According to Kripendorff (2018), the research question of content analysis is "the target of the analyst's inferences from available texts" and should be answered through inferences drawn from texts (p. 47) and research questions should have the following characteristics: answerable by examinations of a body of texts, having a set of possible answers among which analysts select, concerning currently inaccessible phenomena, and allowing for (in)validation (p. 48). Besides, since the news coverage are much easier to access, text and media both reflect and inform public opinion, the research questions in this paper are as follows: ***how the media in the U.S. and China frame the U.S.-China trade war? What are the tones of different media in the two countries?***
+
+Based on the context analysis in the literature review part, this research chooses a collection of a total of 529 sampled articles published between January 2018 and January 2021 by four news organizations to conduct a quantitative content analysis on the U.S.-China Trade War. The four news organizations include People's Daily, which is the largest newspaper group in China and owned by the Central Committee of the Chinese Communist Party (Wikipedia Foundation, 2021); the China Economic Times (CET), a comprehensive daily newspaper, which focuses on economic issues (Wikipedia Foundation, 2020); the New York Times (NYT), a daily newspaper and long been regarded within the industry as a national "newspaper of record" (Wikipedia Foundation, 2021); and the Wall Street Journal (WSJ), an American business-focused, international daily newspaper (Wikipedia Foundation, 2021). These four news organizations are nationally representative and influential news producers. Exploring how news organizations frame the U.S.-China trade war could provide us a comprehensive perspective of how the media in the U.S. and China cover the U.S.-China trade war during the Trump era and the differences in their frames of the U.S.-China trade war are. Besides, understanding the tones of different types of news producers could help us distinguish the government attitudes from the public opinion and make a clear map of where will the Trade War ahead.
+
+On the U.S. side, news organizations might be more independent from the government than China news organizations. Thus, the U.S. news is more likely to be objective and hold multiple opinions on the trade war. When comparing between the two U.S. news organizations, since the NYT is more like a national news organization, there might be a larger proportion of its news reflect government attitudes in contrast to the WSJ, which is a business-focused newspaper, and the news might focus more on the trade unbalance and economic influence. Thus, the tone of the NYT might be more negative in describing the U.S.-China trade war than the WSJ.
+
+In the context of China, media is more likely to be influenced by political authority. People's Daily is owned by the Central Committee of the Chinese Communist Party. Thus, its coverage is more representative of the political attitude of the government of China. The CET is much business-focused, and its news coverage is more regarded as the reflection of economic policy orientations of the Chinese government. Generally, the China news might hold a negative tone towards the trade war launched by the U.S. When comparing the news of the two Chinese news organizations, the tone of People's Daily might be more negative than the China Economic Times.
+
+Based on the theoretical analysis and the U.S.-China trade war performances mentioned above, the **hypotheses** in this paper are as follows:
+
+
+***Hypothesis 1*** : *The Chinese news coverage is more likely to reflect the government's political positions than the U.S. side.*
+
+***Hypothesis 2*** : *Politically oriented newspapers (i.e., People's Daily, the NYT) are more likely to use aggressive words, such as "trade war" to describe U.S.-China relations, than bushiness-focused newspapers (i.e., China Economic Times, the WSJ).*
+
+***Hypothesis 3***, *The tone of the news coverage about the trade war tends to be much negative across four types of news coverage, especially in the news produced by political-oriented news organizations.*
+
+
+# Research Design and Data
+## Topic Model and LDA
+Topic modeling is a model which tries to extract the main topics in a chunk of text. And it is a mixed-membership model; that is to say, it regards each document as a mixture of many topics (Terman, 2017). It is modeling being considered a method of unsupervised machine learning and is useful for exploring a large data set overall. Topic models are a broad class of Bayesian generative models that encode problem-specific structure into an estimation of categories (Blei, 2012; Grimmer & Stewart, 2013). The topic modeling results are in the form of bundles of words with priorities. The number of topics in the results is adjustable. Users could adjust the number of topics and the number of top words in each topic by setting different parameters in the command (Yasseri, 2019).
+
+Political scientists have employed topic models in exploring politically relevant quantities of interest. Quinn et al. (2010) use the dynamic multitopic model to explore legislative speech. They use word selection to infer topical categories in the speech text. Grimmer (2010) uses the expressed agenda model, which uses the structure of political rhetoric to simultaneously estimate the topics in text and the attention political actors allocate to the estimated topics to measure the attention that senators allocate to press releases.
+
+This paper will adopt topic modeling since it holds several advantages given the outcome of interest. It can infer and analyze substantively meaningful topics with minimal assumptions (Quinn et al., 2010). It is also replicable since it is an automated model. Thus, the validity concern of content analysis could be easily addressed (Terman, 2017). Technologically, topic models are used to uncover the underlying semantic structure of the text. As an unsupervised machine learning method, topic models are suitable for data exploration. The calculation of topic models aims to determine the proportionate composition of a fixed number of topics in the documents of a collection. It is useful to experiment with different parameters to find the most suitable parameters for your analysis needs (Schweinberger, 2021).
+
+Latent Dirichlet Allocation (LDA) is the algorithm the topic modeling used in this paper. LDA is one of the algorithms that are commonly used in topic modeling. It is a generative probabilistic model for content analysis. Specifically, it is a three-tier hierarchical Bayesian model, in which each item of a collection is modeled as a finite mixture on an underlying set of topics. Each topic, in turn, is modeled as an infinite mixture of a set of potential topic probabilities. Thus, the topic probabilities explicitly represent the document (Blei et al., 2003).
+
+
+# Sentiment Analysis
+Sentiment analysis is automatically classifying texts according to the emotions they express. In the simplest classification, the text is divided into positive, negative, or neutral tones. Using a dictionary is possibly the simplest way to perform sentiment analysis. A sentiment analysis dictionary contains information about the emotions or polarity expressed by words, phrases, or concepts (Elia, 2020).
+
+According to Krippendorﬀ (2008), the idea of sentiment analysis originates from Osgood et al.'s (1957) semantic differential of affective meanings. In their paper, they pointed out three dimensions of effect underlying most subjective appraisals, including evaluation (good-bad), potency (strong–weak), and activity (active-passive) (Osgood, 1974a, 1974b) (pp. 191-192). Multiple researchers have developed various lists of English emotion words from then on. For instance, Whissell's (1989) Dictionary of Affect in Language (DAL), Yong & Soraka's (2012) Lexicoder Sentiment Dictionary (LSD), etc. LSD includes 2,858 negative words, 1,709 positive words, 1,721 positive words preceded by a negation, and 2,826 negative words preceded by a negation.
+
+As for sentiment analysis in the Chinese context, National Taiwan University Sentiment Dictionary (NTUSD) (Ku et al., 2006) and a large Chinese sentiment dictionary (ANTUSD) (Wang & Ku, 2016) are the most used dictionaries. NTUSD is the dictionary used to conduct sentiment analysis on China news articles. And it contains 2812 positive words and 8276 negative words, with a total of 11,088 sentiment words.
+
+
+# Data Collection
+According to Kripendorff (2018), data are the starting point of empirical research, and they are taken as givens. Most content analyses start with texts not aiming to answer research questions but are intended to be read, interpreted, and understood by people rather than professorial analysts. Texts result from reading and re-articulation (p. 47). The data collection for this paper is news coverage generated from four news organizations. The timeline of the collection is from January 1, 2018, when U.S. President Donald Trump began setting tariffs and other trade barriers on China to force it to make changes to what the U.S. says are "unfair trade practices" and intellectual property theft (Wikipedia Foundation, 2021), to January 20, 2021, which marks the end of Trump administration.
+
+*<span style="text-decoration:underline">**Sampling**</span>*
+
+According to Krippendorff (2018), sampling allows the analyst to economize on research efforts by limiting observations to a manageable subset of units that is statistically or conceptually representative of the set of all conceivable relevant units, the population, or universe of interest (p. 91). Content analysts have to sample their texts to give their research questions a fair chance of being answered correctly (p. 113). In this paper, the collection of news coverage is generated by searching the keyword "U.S.-China trade war" on the online open resources of the four news organizations. [Table 1](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 1.png) shows the accurate number of news coverage from each news organization. Overall, there is 529 news coverage, including 186 Chinese news coverage (115 from People's Daily, 71 from China Economic Times) and 343 U.S. news coverage (179 from the NYT and 164 from the WSJ). 
+
+[Figure 1](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Figure 1.png) shows the news coverage from the four news organizations by year. There is no news report from People’s Daily, CET, and NYT from January 1, 2021, to January 20, 2021. Besides, these three news organizations tend to report trade wars more frequently during the first two years. In comparison, the WSJ put more effort into reporting the U.S.-China trade war during the second and third years. The sample is relatively balanced. And as classical newspapers in the U.S. and China, the four kinds of news coverage could represent the whole population of news coverage on the U.S.-China trade war.
+
+
+![**Table 1**](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 1.png){ width=100% }
+![**Figure 1**](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Figure 1.png){ width=100% }
+
+
+*<span style="text-decoration:underline">**Unitizing**</span>*
+Utilizing draws systematic distinctions within a continuum of otherwise undifferentiated text. The text is of interest to an analysis, omits irrelevant matter but keeps together what cannot be divided without loss of meaning. There are three types of units: 1) sampling units, which are units of selection and may provide an analyst with a basis for judging the statistical representativeness of data. The sampling unit is about the sample and the collection of text (Krippendorff 2018, p. 100-101). In this paper, the sample unit is each news article. More details are mentioned in the sampling section above.  2) recording/coding units: which are units of description that collectively bear the information that content analysts process and provide the basis for statistical accounts; It’s the unit of your measurement; it could be the whole text, or some parts of it (pp. 101-102). In this paper, the coding unit is the keywords. 3) context units, which are units that delineate the scope of information that coders need to consult in characterizing the recording units. The rules are identified by the event (pp. 102-103). In this paper, the context unit is the news coverage related to the U.S.-China Trade War during Trump Administration.
+
+
+*<span style="text-decoration:underline">**Coding--Processing**</span>*
+To utilize topic modeling to analyze the topics of the news coverage from each newspaper, we need to process the news collections to generate a document-feature matrix following the following procedures:
+
+Firstly, the news articles collected in different files by year are imported into R using the *readtext* function under *readtext* R package.
+
+Secondly, using the *corpus* function under *quanteda* R package to transfer the texts into a corpus for *quanteda* to understand. A corpus holds documents separately and is typically unchanged as we conduct our analysis (Malkovich, 2018).
+
+Thirdly, using *tokens* function under *quanteda* R package to clean and create tokens to generate individual words in a document, during which I also remove punctuation, stop words, stem the words, and lowercase the words in generating tokens.
+
+Fourthly, I convert the tokens into a *document-feature matrix (DFM)*. The DFM puts the documents into a matrix format. The rows are the original texts, and the columns are the features of that text (often tokens). DFM neatly organizes the documents we want to look at and are particularly handy if we want to analyze only part of the whole set of texts within the corpus (Malkovich, 2018).
+
+Fifthly, I use *textplot_wordcloud* function under *quanteda.textplot* R package to visualize DFM by generating word clouds.
+
+*<span style="text-decoration:underline">**Coding--Topic Modeling**</span>*
+The topic modeling in the paper utilizes the *LDA* algorithm. And the *textmodel_seededlad* function in *seededlda* R package is the main function utilized to conduct topic modeling. To label each cluster of keywords with appropriate topic labels, I build dictionaries with ten topics and related words based on the raw list generated by the *textmodel_seededlad* function. Since the self-made dictionaries are compatible with the *LDA model* function, I rerun the function by importing the dictionaries and finally get the topic modeling results.  
+*<span style="text-decoration:underline">**Coding--Sentiment Analysis**</span>*
+The sentiment analysis utilizes *dfm_lookup* function from *quanteda* R package. For U.S. news articles, *data_dictionary_LSD2015* dictionary command is used to import Yong & Soraka’s (2012) *Lexicoder Sentiment Dictionary (LSD)*. I utilize the simple Chinese version of Ku et al.’s (2006) *National Taiwan University Sentiment Dictionary (NTUSD)* for China news articles.  
+
+*<span style="text-decoration:underline">**Chi-Square Tests**</span>*
+The Chi-square test will be utilized to determine if there is a difference in proportions (or counts of categorical responses) between independent news organizations. The null hypotheses for the Chi-square tests are that the frequency of the keywords across different newspapers is the same. The chi-square tests were all set at the significance level of .05.
+
+# Results and Analysis
+## Key Words Summary
+When looking through the news text from the four news organizations, we could detect several frequently appeared words or phrases, such as trade war, trade conflict/ friction (same phrase in Chinese), trade dispute, unilateralism, multilateralism, protectionism, and trade deficit, etc. Using the count function in TextEdit, the frequencies of each keyword are counted, and the results are shown in [Table 2](https://minshimia.github.io/Content-Analysis-Using-ML
+/Table 2.png). According to the table, there is a difference in newspapers describing the U.S.-China trade war. Specifically, on China's side, the People's Daily has used "trade war" 472 times and "trade conflict/friction/dispute" 122 times in its 115 news articles, while the CET has used the "trade war" 137 times and "trade conflict/friction" 328 times in its 71 news articles. It shows that politically oriented newspaper – the People's Daily tends to use the aggressive phrase "trade war" more frequently than the business-focused newspaper – CET, which tends to use the more moderate phrase "trade conflict/ friction/ dispute" in their news articles. The Chi-square statistic is 266.8251, with df = 1, p-value <0.00001, significant at 0.05 confidence level (more details in [Appendix Table 2.1](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 2.1.png)), supporting the difference in the use of words to describe trade war in China news articles, and provide evidence to ***H2***.
+
+On the U.S. side, the NYT has also used "trade war" more often, with a frequency of 468 in 179 articles compared to the WSJ's 242 times of usage of "trade war" in 164 articles. Besides, the WSJ has used "trade conflict/friction/dispute" more often -- 124 times compared to the frequency of the words used in NYT – 30 times. The phenomenon in the U.S. side also indicates that as the national newspaper, NYT is more politically oriented and tends to reflect more of the governments' attitudes than business-focused newspapers –WSJ.  Moreover, the Chi-square statistic is 111.7565, with df = 1, p-value <0.00001, significant at 0.05 confidence level (more details in [Appendix Table 2.2](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 2.2.png)), supporting the difference in the use of words to describe trade war in the U.S. news articles, and provide further evidence for ***H2***.
+
+Besides, the People's Daily has used "protectionism" 122 times and "unilateralism" 73 times to criticize the trade war launched by the U.S., showing a strong attitude of the Chinese government. The "protectionism" and "unilateralism" have appeared 92 and 31 times accordingly in CET, which is fewer than the People's Daily but much more than the frequencies appeared in the NYT and WSJ. Besides, the chi-square statistic is 9.4298, with df = 1, p-value = .002135, significant at 0.05 confidence level (more details in [Appendix Table 2.3](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 2.3.png)). Overall, these results provide evidence for ***H1*** that the Chinese news coverage is more likely to reflect the government's political positions than the U.S. side.
+
+![**Table 2**](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 2.png){ width=100% }
+
+According to the word clouds generated using quanteda.textplots package in R, we could detect more keywords not included in [Table 2](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 2.png). For instance, company, market, president, billion in the word cloud for NYT; economy, stock, price, industry in the word cloud of WSJ; development, rules, government, company in the word cloud of People's Daily; and global, tariff, development, product, investment in the word cloud of CET as shown in [Figure 2](https://minshimia.github.io/Content-Analysis-Using-ML/Figure 2.png). Thus, using topic modeling to explore the topics different news articles have covered is necessary to explore how news organizations frame the U.S.-China Trade War in-depth.
+
+## Topic Modeling
+In topic modeling, the number of topics K is the most important parameter to define in advance. How an optimal K should be selected depends on various factors. If K is too small, the collection is divided into a few very general semantic contexts. If K is too large, the collection is divided into too many topics, of which some may overlap, and others are hardly interpretable. After multiple tries, a thematic "resolution" of K = 10 topics is the best one to distinguish the topics of the words in the U.S. news, while K = 10 topics are the best to distinguish the topics of the words. According to the words that frequently appeared in each newspaper, I generated a specific dictionary with ten topics and a list of words under each topic. And the results of topic modeling are shown in [Table 3](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 3.png) and [Table 4](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 4.png) for the four news organizations.
+
+![**Table 3**](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 3.png){ width=100% }
+![**Table 4**](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 4.png){ width=100% }
+
+[Table 3](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 3.png) shows that NYT and WSJ news topics cover big firms, big figures, trade, technology, employment, economy, politics, leaders, country relations, and COVID-19. While [Table 4](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 4.png) shows that the People's Daily and CET news cover trade, negotiation, technology, employment, economy, politics, country relations, COVID-19 that duplicate with the topics in U.S. news, also two specific topics, including positive and negative propaganda. China newspapers frame the U.S.-China Trade War slightly differently. Specifically, they do not pay much attention to the actions of big firms and the arguments of the big figures; they are rather more likely to function as a vehicle of the Chinese government to propagandize Xi Jinping's Thought on Socialism with Chinese Characteristics for a new era and to criticize the U.S.'s actions of launching a trade war and emphasize it as a danger to Chinese people, providing further support to ***H1***. 
+
+# Sentiment Analysis
+[Table 5](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 5.png) shows the sentiment analysis results. The frequencies and proportions of positive and negative words that appeared in the news articles from different newspapers could reveal the tones in each newspaper. As shown in Table 5, there are more negative words in People's Daily, the NYT, and WSJ, while the positive words in CET occupy a larger proportion than negative words. When comparing across categories, in politically oriented newspapers (i.e., People's Daily, the NYT), the proportion of negative words (54.87%) is larger than the proportion of positive words (45.13%); As for the business-focused newspaper (i.e., CET, WSJ), the proportion of positive words (52.03%) is larger than the proportion of negative words (47.97%). Moreover, the chi-square statistic for different categories of newspaper is 164.9382, with df = 1, p-value < 0.00001, significant at 0.05 confidence level (more details in [Appendix Table 2.4](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 2.4.png)). Thus, we could conclude that the tone of the news coverage about the trade war tends to be much negative across three newspapers except for CET, and political-oriented newspapers tend to use more negative words compared to business-focused newspapers.
+
+![**Table 4**](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 5.png){ width=100% }
+
+# Conclusion
+The tit-for-tat exchange of sanctions between the U.S. and China during the U.S.-China Trade War has imposed an imperative impact on the two sides' economy and their relations. China's rising and rejuvenation in the 21st century has attracted the U.S. government's attention, especially after its GDP surpassed Japan and became the second-largest economy in 2010. The Obama Administration began to turn its effort from the Middle East to East Asia by advancing the Rebalance to Asia and the Pacific policy. After Trump came into power in 2017, he focused on the trade unbalance between the U.S. and China and launched the Trade War in 2018. Whether a trade war could benefit the country launching it is controversial. Trump Administration maintains that it could help the U.S. reduce its trade deficit, but the U.S. companies and consumers burden the imposed tariff on Chinese goods. Besides, China companies have also suffered a lot due to the imposed tariffs and other limitations. ***What are the general opinions on the Trade War in the U.S. and China?***
+
+Since media is the most important information source for people to understand the procedures of the U.S.-China Trade War, this paper conducts a quantitative content analysis based on a collection of 529 news articles from four representative news organizations, specifically, People's Daily, China Economic Times on the China side, and the New York Times, Wall Street Journal on the U.S. side. Under framing theory, this research utilizes keyword count, topic modeling, sentiment analysis, and chi-square tests to examine how different newspapers frame the trade war and their tones in the news coverage. The keywords count, topic modeling combined with chi-square tests provide strong support to the first two hypotheses and suggest that the Chinese news coverage is more likely to reflect the government's political positions than the U.S. side. Also, when comparing news articles by newspaper categories, politically oriented newspapers (i.e., People's Daily, the NYT) prefer to use aggressive words, such as "trade war" to describe U.S.-China relations, in contrast to bushiness-focused newspapers (i.e., China Economic Times, the WSJ). Besides, the sentiment analysis indicates that the tone of the news coverage of People's Daily, New York Times, and Wall Street Journal is relatedly negative since they use more negative words than positive words. But the proportion of positive words in the news coverage of China Economic Times is a little bit larger than the proportion of negative words, indicating that the industries and companies hold much more moderate attitudes towards the Trade War, and the government of China might hope to make a deal with the U.S. to decrease the economic damage with a relatively compromised attitude. 
+
+Content analysis through news articles provides a comprehensive perspective to understand how newspapers frame the Trade War and the tones shown in the news coverage, which could further be utilized to interpret the opinions of the government and the public and provide a reference for further direction U.S.-China trade war. This approach could be generalized and used to analyze the tendency of other events.
+         
+
+
+# References
+Adekola, T. A. (2019). US-China trade war and the WTO dispute settlement 
+mechanism. Journal of International Trade Law and Policy. https://doi.org/10.1108/ JITLP-02-2019-0011.
+
+Barboza, D. (2010, August 15). China Passes Japan as Second-Largest Economy. The New York Times. Retrieved November 13, 2021, from https://www.nytimes.com/2010/08/16/business/global/16yuan.html. 
+
+Blei, David. (2012). Probabilistic topic models. Communications of the ACM. 55(4): pp.77–84.
+
+Blei, David M., Andrew Y. Ng and Michael I. Jordan. (2003). Latent Dirichlet Allocation. The Journal of Machine Learning Research 3: 993–1022.
+
+Brander, J. A., & Spencer, B. J. (1985). Export subsidies and international market share rivalry. Journal of International Economics. 18(1): pp. 83-100.
+
+Chen, J. (2021, July 27). Trade war. Investopedia. Retrieved November 13, 2021, from https://www.investopedia.com/terms/t/trade-war.asp.
+
+Elia, Francesco. (2020, August 26). Sentiment Analysis Dictionaries. Retrieved December 9, 2021, from https://www.baeldung.com/cs/sentiment-analysis-dictionaries. 
+
+Foot, Rosemary & King, Amy. (2019). Assessing the deterioration in China–US relations:  US governmental perspectives on the economic‑security nexus. China International Strategy Review. 1, pp.39–50.
+
+Gitlin, T. (1980). The whole world is watching. Oakland: University of California Press.
+
+Grimmer, Justin. (2010). A Bayesian hierarchical topic model for political texts: Measuring expressed agendas in senate press releases. Political Analysis 18(1): pp. 1–35.
+
+Grimmer, J. & Stewart, B. M. (2013). Text as data: The promise and pitfalls of automatic content analysis methods for political texts. Political analysis, 21(3): pp. 267-297.
+
+Gorman, W. M. (1957). Tariffs, retaliation, and the elasticity of demand for imports. Review of Economic Studies. 25: pp.33–162.
+
+Gros, Daniel. (1987). A note on the optimal tariff, retaliation and the welfare loss from tariff wars in a framework with intra-industry trade. Journal of International Economics. 23: pp.357-367.
+
+Guan, Tianru. (2018). Framing the Boundary of Sino-Japanese Conflicts in China’s Communication Sphere: A Content Analysis of the News Coverage of Japan and Sino-Japanese Controversies by the People’s Daily between 2001 and 2015. Journal of China Political Science. 23:603–618. 
+
+Kaldor, Nicholas. (1980). The Foundations of Free Trade Theory and their Implications for the Current World Recession. International Trade and Unemployment. pp. 85-100.
+
+Krippendorﬀ, K. (2018). Content analysis: An introduction to its methodology. Sage publications, 4th edition.
+
+Ku, L.-W., Liang, Y.-T., & Chen, H.-H. (2006). Opinion Extraction, Summarization and Tracking in News and Blog Corpora. Paper presented at the AAAI spring symposium: Computational approaches to analyzing weblogs.
+
+Liang, Guoyong. Ding, Haoyuan. (2020). The China-US Trade War. Abingdon, New York: Routledge Taylor & Francis Group.
+
+Malkovich, Leah. (2018, November 27). A Beginner’s Guide to Text Analysis with quanteda. Retrieved December 9, 2021, from https://data.library.virginia.edu/a-beginners-guide-to-text-analysis-with-quanteda/. 
+
+Mullen, A. (2021, August 29). Explainer | US-China trade war timeline: key dates and events since July 2018. China Briefing News. Retrieved November 13, 2021, from https://www.scmp.com/economy/china-economy/article/3146489/us-china-trade-war-timeline-key-dates-and-events-july-2018. 
+
+Osgood, Charles E. (1974a). Probing subjective culture: Part 1. Crosslinguistic tool making. Journal of Communication, 24(1), 21–35. 
+
+Osgood, Charles E. (1974b). Probing subjective culture: Part 2. Crosscultural tool using. Journal of Communication, 24(2), 82–100.
+
+Osgood, Charles E.; Suci, George J.; & Tannenbaum, Percy H. (1957). The measurement of meaning. Urbana: University of Illinois Press.
+
+Quinn, K. M., B. L. Monroe, M. Colaresi, M. H. Crespin, D. R. Radev. (2010). How to analyze political attention with minimal assumptions and costs. American Journal of Political Science 54(1): pp. 209–28.
+
+Schoen, J. W. (2019). Trump’s claims of ‘$100 billion’ in Chinese tariff payments just don’t add up. Retrieved November 13, 2021, from https://www.cnbc.com/2019/05/10/trumps-claims-of-100-billion-in-chinese-tariff-payments-just-dont-add-up.html.
+ 
+Schweinberger, Martin. (2021, November 24). Topic Modeling with R. Retrieved December 8, 2021, from https://slcladal.github.io/topicmodels.html.
+
+
+Semetko, Holli A., & Patti M. Valkenburg. (2000). Framing European politics: A content analysis of press and television news. Journal of Communication 50 (2): pp. 93–109.
+
+Smith, Adam. (1977). The Wealth of Nations - An Inquiry Into the Nature and Causes of the Wealth of Nations. Chicago: University of Chicago Press.
+
+Steinbock, D. (2018). US-China Trade War and Its Global Impacts. World Century Publishing Corporation and Shanghai Institutes for International Studies China Quarterly of International Strategic Studies, Vol. 4, No. 4, pp. 515–542.
+
+Taylor, T. (2012). The Instant Economist: Everything You Need to Know About How the Economy Works. New York: Plume Book.
+
+Terman, R. (2017). Islamophobia and media portrayals of muslim women: A computational text analysis of us news coverage. International Studies Quarterly, 61(3): pp. 489–502. 
+
+The Department of Defense. (2018). Summary of the National Defense Strategy (NDS). January 2018.
+
+The Investopedia Team. (2021, September 3). What is the prisoner's dilemma? Investopedia. Retrieved November 13, 2021, from https://www.investopedia.com/terms/p/prisoners-dilemma.asp. 
+
+The White House. (2017). National Security Strategy of the United States of America, December 2017.
+
+The World Bank (2020). World Development Indicators -- GDP (current US$) by country. 1960-2020 [Data set]. The World Bank. https://data.worldbank.org/indicator/NY.GDP.MKTP.CD.
+
+Vreese, Claes. H. de. (2005). News framing: Theory and typology. Information Design Journal & Document Design 13 (1): 51–62.
+
+Whalley, J. (1985). Trade Liberalization among Major World Trading Areas. Cambridge, MA:MIT Press.
+
+Wikipedia Foundation. (2020, December 11). China Economic Times. Wikipedia. Retrieved November 3, 2021, from https://en.wikipedia.org/wiki/China_Economic_Times.
+
+Wikipedia Foundation. (2021, November 10). China-United States Trade War. Wikipedia. Retrieved November 13, 2021, from https://en.wikipedia.org/wiki/China–United_States_trade_war.
+
+Wikipedia Foundation. (2021, October 17). Comparative advantage. Wikipedia. Retrieved November 13, 2021, from https://en.wikipedia.org/wiki/China–United_States_trade_war.
+
+Wikipedia Foundation. (2021, September 27). People's Daily. Wikipedia. Retrieved November 3, 2021, from https://en.wikipedia.org/wiki/People%27s_Daily. 
+
+Wikipedia Foundation. (2021, October 30). The New York Times. Wikipedia.  Retrieved Nov 3,2021, from https://en.wikipedia.org/wiki/The_New_York_Times#cite_note-EB-10. 
+
+Wikipedia Foundation. (2021, October 29). The Wall Street Journal. Wikipedia. Retrieved November 3, 2021, from https://en.wikipedia.org/wiki/The_Wall_Street_Journal. 
+
+Wikipedia Foundation. (2021, November 12). Trade War. Wikipedia. Retrieved November 13, 2021, from https://en.wikipedia.org/wiki/Trade_war#cite_note-1.
+
+Whissell, C. (1989). The dictionary of affect in language. In R. Plutchnik & H. Kellerman (Eds.), Emotion: Theory and research (pp. 113–131). New York, NY: Harcourt Brace. 
+
+Wang, Shih-Ming & Lun-Wei Ku. 2016. ANTUSD: A Large Chinese Sentiment Dictionary. LERC.
+
+Wong, D., & Koty, A. C. (2020, August 25). The US-china trade war: A timeline. China Briefing News. Retrieved November 13, 2021, from https://www.china-briefing.com/news/the-us-china-trade-war-a-timeline/. 
+
+Yasseri, Taha. (2019). An Introduction to Topic Modeling [Video]. SAGE Publications Ltd. Retrieved November 13, 2021. from https://methods-sagepub-com.libproxy.utdallas.edu/video/an-introduction-to-topic-modeling. 
+
+Young, L. and Soroka, S. (2012). Aﬀective news: The automated coding of sentiment in political texts. Political Communication, 29(2):205–231.
+
+
+*<span style="text-decoration:underline">**Datasets**</span>*
+
+China Economic Times (2021). China Economic Times. Retrieved Oct 18, 2021, from http://www.cet.com.cn.
+
+LexisNexis (2021). The New York Times. Retrieved Oct 18, 2021, from https://advance-lexis-com.libproxy.utdallas.edu/search?crid=fb3ec23d-a568-4491-abb2-25c914aaf2d2&pdsf=MTA2OTUwNQ~%5Enews~%5EFalse~%5EThe+New+York+Times&pdtypeofsearch=urlapi&pdmfid=1516831&pdisurlapi=true. 
+
+People’s Daily (2021). People’s Daily. Retrieved , from Oct 18,2021, from http://data.people.com.cn/rmrb/20210901/1?code=2. 
+
+ProQuest (2021). The Wall Street Journal. Retrieved Oct 18, 2021, from https://www.proquest.com/wallstreetjournal/index?accountid=7120. 
+
+  
+# Appendix
+
+![**Table 2.1 Chi-square Test for China News Articles**](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 2.1.png){ width=100% }
+
+![**Table 2.2 Chi-square Test for US News Articles**](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 2.2.png){ width=100% }
+
+![**Table 2.3 Chi-square Test for Political Words in Newspapers by Country**](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 2.3.png){ width=100% }
+
+![**Table 2.4 Chi-square Test for Sentiment Words by Newspaper Categories**](https://minshimia.github.io/Content-Analysis-Using-ML/Framing US-China Trade War/Table 2.4.png){ width=100% }
+
+
